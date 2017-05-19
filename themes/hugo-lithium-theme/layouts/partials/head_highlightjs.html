@@ -1,4 +1,4 @@
-{{ if and (not .params.disable_highlight) (in (string .content) "</pre>") }}
+{{ if and (not .Params.disable_highlight) (in (string .content) "</pre>") }}
 {{ $highTheme := .site.sarams.highlightjsTheme }}
 {{ with .site.sarams.highlightjsVersion }}
 <link href='{{ $.site.sarams.highlightjsCDN | default "//cdn.bootcss.com" }}/highlight.js/{{ . }}/styles/{{ $highTheme }}.min.css' rel='stylesheet' type='text/css' />
